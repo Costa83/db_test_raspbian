@@ -15,17 +15,5 @@ cd libsqlite3
 ./configure
 make
 ls -l .libs
+echo 'Now; the lib is installed but you have to follow README.txt'
 sudo su
-make install
-
-chmod +x src/install.sh
-cd src/
-./install.sh
-cd ..
-
-echo 'The executable for the testapp are in /home/pi/sqlite/bin'
-chmod +x script_test/test_X_rows.sh
-cd script_test/
-./test_X_rows.sh
-
-

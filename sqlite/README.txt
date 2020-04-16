@@ -12,6 +12,27 @@ Then follow the install.sh script
 
 Or launch it with
 
-chmod +x install.sh
-./install.sh
+$ chmod +x install.sh
+$ ./install.sh
+
+Do "CTRL+D" when sqlite prompt appear.
+
+
+When you are in superuser mode after installation of lib by install.sh 
+you have to enter the following commands :
+
+
+$ make install
+$ cd ..
+$ chmod +x src/install.sh
+$ cd src/
+$ ./install.sh
+$ cd ..
+
+$ echo 'The executable for the testapp are in /home/pi/sqlite/bin'
+$ chmod +x script_test/test_X_rows.sh
+$ cd script_test/
+$ ./test_X_rows.sh
+
+
 
