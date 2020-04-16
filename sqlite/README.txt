@@ -29,7 +29,8 @@ $ cd src/
 $ ./install.sh
 $ cd ..
 
-$ echo 'The executable for the testapp are in /home/pi/sqlite/bin'
+The executables for the testapp are in /home/pi/sqlite/bin now.
+
 $ chmod +x script_test/test_X_rows.sh
 $ cd script_test/
 $ ./test_X_rows.sh
