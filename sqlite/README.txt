@@ -34,3 +34,15 @@ $ ./test_X_rows.sh
 
 $ sudo cp /usr/local/lib/libsqlite3.so.0.8.6 /usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6
 
+
+###########################################
+To use sqlite with the terminal (command shell) in raspbian :
+
+from /home/pi/db_test_raspbian/sqlite/script_test
+
+$ sqlite3
+sqlite> .database
+sqlite> .tables
+sqlite> select * from STT;
+
+
