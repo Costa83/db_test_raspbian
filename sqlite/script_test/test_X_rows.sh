@@ -29,7 +29,7 @@ echo "--->5/12 Lecture de toutes les lignes              ---"
 ./sttTestReadAllRowsSqlite
 
 echo "--->6/12 Insertion de la ligne numero $div_ten     ---"
-./sttTestInsertRowsSqlite -i $div_ten 
+./sttTestInsertRowsSqlite -i $div_ten
 
 echo "--->7/12 Suppression de la ligne numero $blast     ---"
 ./sttTestDeleteRowsSqlite -r $blast
@@ -41,12 +41,10 @@ echo "--->9/12 Lecture de la ligne du milieu $middle     ---"
 ./sttTestReadRowSqlite -r $middle
 
 echo "--->10/12 Lecture de toutes les lignes              ---"
-sttTestReadAllRowsSqlite
-
-echo "--->11/12 Suppression de toutes les lignes          ---"   
-./sttTestDeleteAllRowsSqlite
-
-echo "--->12/12 Lecture de toutes les lignes              ---"   
 ./sttTestReadAllRowsSqlite
 
+echo "--->11/12 Suppression de toutes les lignes          ---"
+./sttTestDeleteAllRowsSqlite
 
+echo "--->12/12 Lecture de toutes les lignes              ---"
+./sttTestReadAllRowsSqlite

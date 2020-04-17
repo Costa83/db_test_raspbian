@@ -15,7 +15,7 @@ $ sqlite3
 
 $ git clone https://github.com/Costa83/libsqlite3.git
 $ cd libsqlite3
-$ ./configure
+$ ./configure --disable-dynamic-extensions --enable-static --disable-shared
 $ make
 $ ls -l .libs
 $ sudo su
