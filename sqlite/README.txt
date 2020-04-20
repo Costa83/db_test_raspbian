@@ -13,7 +13,7 @@ $ cd db_test_raspbian/sqlite/
 $ sudo apt-get install sqlite3
 $ sqlite3
 
-$ git clone https://github.com/Costa83/libsqlite3.git
+$ git clone https://github.com/LuaDist/libsqlite3.git
 $ cd libsqlite3
 $ ./configure --disable-dynamic-extensions --enable-static --disable-shared
 $ make
