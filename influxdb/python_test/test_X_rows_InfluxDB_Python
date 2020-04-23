@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo "--- Test INFLUX DB in Pyhton  ---"
+echo "--- Clean directory: rm /var/lib/influxdb/test_influx_db.db"
+echo "--- ......"
+echo "--- Enter the number of rows to insert :      --- "
+
+read -p "-> " r
+
+middle=$(( r / 2 ))
+blast=$(( r - 1 ))
+div_ten=$(( r / 10))
+
+echo "--->0/12 Create d'une base InfluxDB                ---"
+python3 sttTestCreateDBInfluxDBPython.py
+
+echo "--->1/12 Suppression d'une base InfluxDB sans data ---"
+python3 sttTestDropEmptyInfluxDBPython.py
+
+echo "--->2/12 Insertion de  $r lignes en BD             ---"
+python3 sttTestWritePointsInfluxDBPython.py --points $r
+
+echo "--->3/12 Lecture de  la ligne id  $middle  en BD   ---"
+python3 sttTestReadOneRowsInfluxDBPython.py --id $middle
+
+echo "--->4/12 Lecture de  la ligne id  1  en BD   ---"
+python3 sttTestReadOneRowsInfluxDBPython.py --id 1
+
+echo "--->4/12 Lecture de  la ligne id  $blast  en BD   ---"
+python3 sttTestReadOneRowsInfluxDBPython.py --id $blast
+
+echo "--->5/12 Lecture de toutes les lignes  en BD   ---"
+python3 sttTestReadAllRowsInfluxDBPython.py
+
+echo "--->6/12 Suppression de  $r lignes en BD             ---"
+python3 sttTestDropInfluxDBPython.py
+
+
+# echo "--->7/12 Suppression de la ligne numero $blast     ---"
+# sttTestDeleteRowsInfluxDBPython -r $blast
