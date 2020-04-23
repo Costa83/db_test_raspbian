@@ -1,12 +1,12 @@
-﻿INSTALL TESTS EN GO (INFLUXDB) sur  UBUNTU HOST :
+﻿INSTALL TESTS EN GO (INFLUXDB) sur  RASPBIAN HOST :
 
-On est sur une architecture client-serveur où ici le client et le serveur est situé sur le PC hote.
+On est sur une architecture client-serveur où ici le client est la RPI et le serveur le PC Host.
 
 
 
 ## Prérequis 1 : Installer GRAFANA & INFLUXDB (CLIENT & SERVER) voir DOC ../
 
-## Prérequis 2: Installer la commande go pourconstruire le package depuis l’hote:
+## Prérequis 2: Installer la commande go pour construire le package depuis RASPBIAN
 
 Depuis le site officiel de go :
 
@@ -15,14 +15,19 @@ https://golang.org/dl/
 Linux, macOS, and FreeBSD tarballs 
 Download the archive and extract it into /usr/local, creating a Go tree in /usr/local/go. For example: 
 
-go1.14.2.linux-amd64.tar.gz
+go1.14.2.linux-arm64.tar.gz
 
-$ sudo tar -C /usr/local -xzf go1.14.2.linux-amd64.tar.gz
+$ sudo tar -C /usr/local -xzf go1.14.2.linux-arm64.tar.gz
 $ export PATH=$PATH:/usr/local/go/bin
 Pour pouvoir utiliser largement la commande go depuis tout le système :
 $ gedit .bashrc
 Et ajouter à la fin du fichier la ligne suivante:
 export PATH=$PATH:/usr/local/go/bin
+
+
+$ apt-get install golang
+
+
 
 Créer un fichier hello.go contenant :
 	package main
@@ -58,7 +63,7 @@ Depuis le git clone :
 
 
 
-$ go mod init ../golang_tets
+$ go mod init ../golang_test
 $ go mod tidy
 
 génère un go.mod et un go.sum
