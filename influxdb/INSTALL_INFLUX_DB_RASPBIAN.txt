@@ -11,3 +11,14 @@
   Pouvoir créer la base de donnée sur le PC serveur depuis la Raspberry PI 4 sous Raspbian et afficher les données sous GRAFANA. 
 
 
+
+$ pip install influxdb
+$ pip install --upgrade influxdb
+$ pip uninstall influxdb
+On Debian/Ubuntu, you can install it with this command:
+$ sudo apt-get install python-influxdb
+GO :
+
+
+
+
